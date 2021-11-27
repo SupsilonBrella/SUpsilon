@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>答题系统</title>
+<script>
+function is()
+{
+ if(document.getElementsByName('a1')[2].checked ==true)
+  alert("正确");
+ else
+  alert("错误");
+}
+</script>
+</head>
+
+<body>
+<div>
+<div><h1>1.这是个测试，答案为C</h1></div>
+<div>
+<input type=radio name=a1>A. 
+<input type=radio name=a1>B.
+<input type=radio name=a1>C.
+<input type=radio name=a1>D. 
+<input type="button" value="确定" onclick="is();"/>
+</div>
+</div>
+</body>
+</html>
