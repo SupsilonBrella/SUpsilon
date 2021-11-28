@@ -72,7 +72,7 @@ function generateDeletionLink1() {
 	var type = $('input:radio[name=type]:checked').val();
 	var timestamp = new Date(year, month, day, hour, minute, 0, 0);
 	var html = '';
-	html += '<div>Copy this code to drop the timer into a post or page:</div>';
+	html += '<div>复制下列代码块并放置在页面或讨论串中：</div>';
 	html += '<div>';
 	html += '<blockquote><strong>[[iframe http://www.brella.top/deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 50px;"]]</strong></blockquote>';
 	html += '</div>';
@@ -90,7 +90,7 @@ function generateDeletionLink2() {
 	var now = new Date();
 	var timestamp = new Date(now.getTime() + (day * 24*60*60*1000) + (hour * 60*60*1000) + (minute * 60*1000));
 	var html = '';
-	html += '<div>Copy this code to drop the timer into a post or page:</div>';
+	html += '<div>复制下列代码块并放置在页面或讨论串中：</div>';
 	html += '<div>';
 	html += '<blockquote><strong>[[iframe http://www.brella.top/deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 50px;"]]</strong></blockquote>';
 	html += '</div>';
@@ -158,7 +158,7 @@ function initGenerators() {
 	html += '</div>';
 	html += '<div>';
 	html += 'Delete at: ';
-	html += '<select id="gen1Month" name="month">';
+	html += '<select id="gen1Month" name="月数">';
 	html += '<option value="0"' + (now.getMonth() == 0 ? ' selected' : '') + '>January</option>';
 	html += '<option value="1"' + (now.getMonth() == 1 ? ' selected' : '') + '>February</option>';
 	html += '<option value="2"' + (now.getMonth() == 2 ? ' selected' : '') + '>March</option>';
@@ -172,28 +172,28 @@ function initGenerators() {
 	html += '<option value="10"' + (now.getMonth() == 10 ? ' selected' : '') + '>November</option>';
 	html += '<option value="11"' + (now.getMonth() == 11 ? ' selected' : '') + '>December</option>';
 	html += '</select>';
-	html += '<select id="gen1Day" name="day">';
+	html += '<select id="gen1Day" name="天数">';
 	for (i = 1; i < 32; i ++) {
 		html += '<option value="' + i + '"' + (now.getDate() == i ? ' selected' : '') + '>' + i + '</option>';
 	}
 	html += '</select>';
-	html += '<select id="gen1Year" name="year">';
+	html += '<select id="gen1Year" name="年数">';
 	for (i = 2010; i < 2016; i ++) {
 		html += '<option value="' + i + '"' + (now.getFullYear() == i ? ' selected' : '') + '>' + i + '</option>';
 	}
 	html += '</select>';
 	html += ' at ';
-	html += '<select id="gen1Hour" name="hour">';
+	html += '<select id="gen1Hour" name="小时数">';
 	for (i = 0; i < 24; i ++) {
 		html += '<option value="' + i + '"' + (now.getHours() == i ? ' selected' : '') + '>' + (i < 10 ? '0' : '') + i + '</option>';
 	}
 	html += '</select>';
-	html += '<select id="gen1Minute" name="minute">';
+	html += '<select id="gen1Minute" name="分钟数">';
 	for (i = 0; i < 60; i ++) {
 		html += '<option value="' + i + '"' + (now.getMinutes() == i ? ' selected' : '') + '>' + (i < 10 ? '0' : '') + i + '</option>';
 	}
 	html += '</select>';
-	html += ' <input type="submit" value="Generate!" />';
+	html += ' <input type="submit" value="开始" />';
 	html += '</div>';
 	
 	$("#genForm1Contents").html(html);
@@ -206,25 +206,25 @@ function initGenerators() {
 	html += '</div>';
 	html += '<div>';
 	html += 'Delete after: ';
-	html += '<select id="gen2Day" name="day">';
+	html += '<select id="gen2Day" name="天数">';
 	for (i = 0; i < 31; i ++) {
 		html += '<option value="' + i + '">' + i + '</option>';
 	}
 	html += '</select>';
 	html += ' days ';
-	html += '<select id="gen2Hour" name="hour">';
+	html += '<select id="gen2Hour" name="小时数">';
 	for (i = 0; i < 24; i ++) {
 		html += '<option value="' + i + '">' + i + '</option>';
 	}
 	html += '</select>';
 	html += ' hours ';
-	html += '<select id="gen2Minute" name="minute">';
+	html += '<select id="gen2Minute" name="分钟数">';
 	for (i = 0; i < 60; i ++) {
 		html += '<option value="' + i + '">' + i + '</option>';
 	}
 	html += '</select>';
 	html += ' minutes ';
-	html += '<input type="submit" value="Generate!" />';
+	html += '<input type="submit" value="开始" />';
 	$("#genForm2Contents").html(html);
 	$('#allcontent').show();
 }
