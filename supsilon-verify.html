@@ -1,0 +1,87 @@
+<body>
+    <div style="text-align:center">
+        <div id="url-type">
+          <input type="radio" name="url-sel" value="scrwiki" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='25';" checked>
+            <input type="radio" name="url-sel" value="wiki-nc" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='25';">
+            <input type="radio" name="url-sel" value="site" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='25';">
+            <input type="radio" name="url-sel" value="no-pre" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='50';">
+        </div>
+        <p><span id="url-pre" style="font-family:Consolas;font-size: 12.8px;color: #333;"> </span>
+        <input type="text" id="url" name="url" placeholder="请以“http://”作为开头" size="25" ></p>
+        <p>
+            <button onclick="Go2()">SUpsilon验证（2021/11/5以后）</button>
+        </p>
+    </div>
+</body>
+
+<script language="javascript">
+
+    var keyWord;
+
+function expand() {
+    var urltype = document.getElementsByName('url-sel');
+   if (urltype[0].checked) {
+       keyWord =   '' + keyWord  ;
+   }
+   if (urltype[1].checked) {
+       keyWord = '' + keyWord;
+   }
+   if (urltype[2].checked) {
+       keyWord = '' + keyWord;
+   }
+}
+
+
+function Go2(){
+keyWord=document.getElementById("url").value;
+if (keyWord != "") {
+    expand();
+  var result=keyWord + '/local--files/supsilon:verify/verify.supsilon';
+  window.open(result);
+}
+}
+</script>
+
+<body>
+    <div style="text-align:center">
+        <div id="url-type">
+          <input type="radio" name="url-sel" value="scrwiki" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='25';" checked>
+            <input type="radio" name="url-sel" value="wiki-nc" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='25';">
+            <input type="radio" name="url-sel" value="site" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='25';">
+            <input type="radio" name="url-sel" value="no-pre" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='50';">
+        </div>
+        <p><span id="url-pre" style="font-family:Consolas;font-size: 12.8px;color: #333;"> </span>
+        <input type="text" id="url" name="url" placeholder="请以“http://”作为开头" size="25" ></p>
+        <p>
+            <button onclick="Go2()">SUpsilon验证（2021/11/5以前）</button>
+        </p>
+    </div>
+</body>
+
+<script language="javascript">
+
+    var keyWord;
+
+function expand() {
+    var urltype = document.getElementsByName('url-sel');
+   if (urltype[0].checked) {
+       keyWord =   '' + keyWord  ;
+   }
+   if (urltype[1].checked) {
+       keyWord = '' + keyWord;
+   }
+   if (urltype[2].checked) {
+       keyWord = '' + keyWord;
+   }
+}
+
+
+function Go2(){
+keyWord=document.getElementById("url").value;
+if (keyWord != "") {
+    expand();
+  var result=keyWord + '/supsilon:verify';
+  window.open(result);
+}
+}
+</script>
