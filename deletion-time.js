@@ -129,18 +129,18 @@ function initGenerators() {
 	var type = 0;
 	switch (vars["type"]) {
 		case '1':
-			message1 = '此封禁将到期于：';
-			message2 = '此封禁已到期：';
+			message1 = '此封禁将到期于';
+			message2 = '此封禁已到期';
 			type = 1;
 		break;
 		case '0':
-			message1 = '此页面将被删除于该时间到期后：';
-			message2 = '此页面可以被删除：';
+			message1 = '此页面将被删除于该时间到期后';
+			message2 = '此页面可以被删除';
 			type = 2;
 		break;
 		default:
-			message1 = '此计时器将到期于：';
-			message2 = '此计时器已到期：';
+			message1 = '此计时器将到期于';
+			message2 = '此计时器已到期';
 	}
 	if (vars["timestamp"]) {
 		//alert(vars["timestamp"]);
