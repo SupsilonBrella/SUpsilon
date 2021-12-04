@@ -151,13 +151,13 @@ function initGenerators() {
 		return;
 	}
 	html += '<div>';
-	html += 'Timer Type: ';
+	html += '计时器类型: ';
 	html += '<input type="radio" name="type" value="0" checked> 删除计时器 &mdash; ';
 	html += '<input type="radio" name="type" value="1"> 封禁计时器 &mdash; ';
 	html += '<input type="radio" name="type" value="2"> 通用/其他计时器';
 	html += '</div>';
 	html += '<div>';
-	html += 'Delete at: ';
+	html += '时间节点: ';
 	html += '<select id="gen1Month" name="月数">';
 	html += '<option value="0"' + (now.getMonth() == 0 ? ' selected' : '') + '>January</option>';
 	html += '<option value="1"' + (now.getMonth() == 1 ? ' selected' : '') + '>February</option>';
@@ -199,13 +199,13 @@ function initGenerators() {
 	$("#genForm1Contents").html(html);
 	html = '';
 	html += '<div>';
-	html += 'Timer Type: ';
+	html += '计时器类型: ';
 	html += '<input type="radio" name="type2" value="0" checked> 删除计时器 &mdash; ';
 	html += '<input type="radio" name="type2" value="1"> 封禁计时器 &mdash; ';
 	html += '<input type="radio" name="type2" value="2"> 通用/其他计时器';
 	html += '</div>';
 	html += '<div>';
-	html += 'Delete after: ';
+	html += '时间节点: ';
 	html += '<select id="gen2Day" name="天数">';
 	for (i = 0; i < 31; i ++) {
 		html += '<option value="' + i + '">' + i + '</option>';
