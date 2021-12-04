@@ -211,19 +211,19 @@ function initGenerators() {
 		html += '<option value="' + i + '">' + i + '</option>';
 	}
 	html += '</select>';
-	html += ' days ';
+	html += ' 天 ';
 	html += '<select id="gen2Hour" name="小时数">';
 	for (i = 0; i < 24; i ++) {
 		html += '<option value="' + i + '">' + i + '</option>';
 	}
 	html += '</select>';
-	html += ' hours ';
+	html += ' 时 ';
 	html += '<select id="gen2Minute" name="分钟数">';
 	for (i = 0; i < 60; i ++) {
 		html += '<option value="' + i + '">' + i + '</option>';
 	}
 	html += '</select>';
-	html += ' minutes ';
+	html += ' 分 ';
 	html += '<input type="submit" value="开始" />';
 	$("#genForm2Contents").html(html);
 	$('#allcontent').show();
