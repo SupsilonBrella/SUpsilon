@@ -129,18 +129,18 @@ function initGenerators() {
 	var type = 0;
 	switch (vars["type"]) {
 		case '1':
-			message1 = 'This ban will expire in';
-			message2 = 'This ban has expired as of';
+			message1 = '此封禁将到期于：';
+			message2 = '此封禁已到期：';
 			type = 1;
 		break;
 		case '0':
-			message1 = 'This page will be eligible for deletion in';
-			message2 = 'This page is eligible for deletion as of';
+			message1 = '此页面将被删除于该时间到期后：';
+			message2 = '此页面可以被删除：';
 			type = 2;
 		break;
 		default:
-			message1 = 'This timer expires in';
-			message2 = 'This timer has expired as of';
+			message1 = '此计时器将到期于：';
+			message2 = '此计时器已到期：';
 	}
 	if (vars["timestamp"]) {
 		//alert(vars["timestamp"]);
@@ -152,9 +152,9 @@ function initGenerators() {
 	}
 	html += '<div>';
 	html += 'Timer Type: ';
-	html += '<input type="radio" name="type" value="0" checked> Deletion Timer &mdash; ';
-	html += '<input type="radio" name="type" value="1"> Ban Timer &mdash; ';
-	html += '<input type="radio" name="type" value="2"> Generic/Other';
+	html += '<input type="radio" name="type" value="0" checked> 删除计时器 &mdash; ';
+	html += '<input type="radio" name="type" value="1"> 封禁计时器 &mdash; ';
+	html += '<input type="radio" name="type" value="2"> 通用/其他计时器';
 	html += '</div>';
 	html += '<div>';
 	html += 'Delete at: ';
@@ -200,9 +200,9 @@ function initGenerators() {
 	html = '';
 	html += '<div>';
 	html += 'Timer Type: ';
-	html += '<input type="radio" name="type2" value="0" checked> Deletion Timer &mdash; ';
-	html += '<input type="radio" name="type2" value="1"> Ban Timer &mdash; ';
-	html += '<input type="radio" name="type2" value="2"> Generic/Other';
+	html += '<input type="radio" name="type2" value="0" checked> 删除计时器 &mdash; ';
+	html += '<input type="radio" name="type2" value="1"> 封禁计时器 &mdash; ';
+	html += '<input type="radio" name="type2" value="2"> 通用/其他计时器';
 	html += '</div>';
 	html += '<div>';
 	html += 'Delete after: ';
