@@ -74,10 +74,10 @@ function generateDeletionLink1() {
 	var html = '';
 	html += '<div>复制下列代码块并放置在页面或讨论串中：</div>';
 	html += '<div>';
-	html += '<blockquote><strong>[[iframe http://www.brella.top/deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 50px;"]]</strong></blockquote>';
+	html += '<blockquote><strong>[[iframe http://www.brella.top/Supsilon/supsilon-timer.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 50px;"]]</strong></blockquote>';
 	html += '</div>';
 	html += '<div>';
-	html += '<iframe src="http://www.brella.top/deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 50px;"></iframe>';
+	html += '<iframe src="http://www.brella.top/Supsilon/supsilon-timer.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 50px;"></iframe>';
 	html += '</div>';
 	$('#generated').html(html);
 }
@@ -92,10 +92,10 @@ function generateDeletionLink2() {
 	var html = '';
 	html += '<div>复制下列代码块并放置在页面或讨论串中：</div>';
 	html += '<div>';
-	html += '<blockquote><strong>[[iframe http://www.brella.top/deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 50px;"]]</strong></blockquote>';
+	html += '<blockquote><strong>[[iframe http://www.brella.top/Supsilon/supsilon-timer.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 50px;"]]</strong></blockquote>';
 	html += '</div>';
 	html += '<div>';
-	html += '<iframe src="http://www.brella.top/deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 50px;"></iframe>';
+	html += '<iframe src="http://www.brella.top/Supsilon/supsilon-timer.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 50px;"></iframe>';
 	html += '</div>';
 	$('#generated').html(html);
 }
