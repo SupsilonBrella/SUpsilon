@@ -134,7 +134,7 @@ function initGenerators() {
 			type = 1;
 		break;
 		case '0':
-			message1 = '此页面将被删除于该时间到期后';
+			message1 = '此页面将被删除于';
 			message2 = '此页面可以被删除';
 			type = 2;
 		break;
