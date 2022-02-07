@@ -26,6 +26,10 @@
 	<div id="allcontent" style="display: none;">
 		<h1>SUpsilon Timer</h1>
 		<div>Edited By Brella</div>
+        <select onchange="window.location=this.value;">
+    <option value="http://www.brella.top/supsilon/t-cn/supsilon-timer.html">繁體中文</option>
+    <option value="http://www.brella.top/supsilon/supsilon-timer.html">简体中文</option>                          
+        </select>		
 		<form id="genForm2" action="javascript:generateDeletionLink2()">
 			<div id="genForm2Contents"></div>
 		</form>
@@ -34,12 +38,6 @@
 	</div>
 	<script type="text/javascript">
 		$(document).ready(initGenerators);
-	</script>
-	  
-<select onchange="window.location=this.value;">
-    <option value="http://www.brella.top/supsilon/supsilon-timer.html">简体中文</option>           
-    <option value="http://www.brella.top/supsilon/t-cn/supsilon-timer.html">繁體中文</option>               
-</select>
-	  
+	</script>  
   </body>
 </html>
