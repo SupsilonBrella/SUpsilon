@@ -217,7 +217,7 @@ function initGenerators() {
 		html += '<option value="' + i + '">' + i + '</option>';
 	}
 	html += '</select>';
-	html += ' 时 ';
+	html += ' 時 ';
 	html += '<select id="gen2Minute" name="分鐘數">';
 	for (i = 0; i < 60; i ++) {
 		html += '<option value="' + i + '">' + i + '</option>';
