@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>谷歌卫星地图</title>
+    <style>
+      html, body, h4 {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+		background-color: #F0F0F0;
+      }
+		a:link, a:visited {color:#333;text-decoration:none;}
+		a:hover, a:active {color:#333;text-decoration:underline;}
+    .split {
+    font-size:0;
+    line-height:0;
+    height:5px;
+    display:block;
+    clear:both;
+     }
+#map-canvas {width:100%;min-width:300px;margin:0 auto; height:680px; border: 1px solid #979797;}
+#list{width:100%; padding: 6px;line-height:25px; clear:both;}
+#list ul{margin:5px 0;padding:0 0;list-style:none;}
+#list ul li{float:left;width:100px;height:25px;margin:0;padding:0 10px; overflow:hidden;}
+    </style>
+    <script type="text/javascript" src="maps/jquery.js"></script>
+    <script type="text/javascript" src="js/maps.js"></script>
+    <script>
+var map;
+function initialize() {
+  geocoder = new google.maps.Geocoder();
+  var myLatlng = new google.maps.LatLng(48.65088,16.23964);
+  var mapOptions = {
+    zoom: 5,
+    center: myLatlng,
+	fullscreenControl: true,
+	streetViewControl: false,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  }
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+         var myOptions = {
+          position : myLatlng,
+		  map : map,
+		  icon : '/images/poi.png'
+         };
+  map.setTilt(0);
+  //marker = new google.maps.Marker(myOptions);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
