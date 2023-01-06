@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN"> 
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<head> 
+<title>encodeURL</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<meta http-equiv="Content-Language" content="zh-CN" /> 
+<script type="text/javascript" src='jquery-1.7.2.js'></script>
+<link href="bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap.min.js"></script>
+<h5>Created By Brella</h5>
+
+</head>
+<body>
+
+	<div id="mainContent">
+	<div>
+		<div>
+		<h4>Url:</h4>
+    	<textarea name='url' id='source' rows="5" class="textareas form-control"> </textarea>
+	</div>
+    <div style="float:left">
+    	<div>
+			<label class="radio" id="en_tip" style="margin-left:20px;"><input type="radio" name="_type" checked="checked"/>encodeURI</label>
+		  <label class="radio" id="co_tip" style="margin-left:20px;"><input type="radio" name="_type" id="co_t"/>encodeURIComponent</label>
+      <button class="btn btn-primary" onclick="javascript:encode_uri();">turn URL</button>
+            <button class="btn btn-primary"  onclick="javascript:decode_uri();">turnback URL</button>
+		</div>
+    </div>
+<div style="clear:both;"></div>
+    <div>
+		<h4>Result</h4>
+		<textarea name='message' id='result' rows="5" class="textareas form-control"></textarea>
+    </div>
+<script>
+$(document).ready(function (){
+	$("#en_tip").popover({
+		'title':'encodeURI',
+		'content':'浣跨敤Javascript encodeURI() 鍑芥暟锛岀敤浜庡畬鏁寸殑URL缂栫爜銆 ',
+		'placement':'right'
+    });
+	$("#co_tip").popover({
+		'title':'encodeURIComponent',
+		'content':'浣跨敤Javascript encodeURIComponent() 鍑芥暟锛岀敤浜庢嫾鎺RL鐨勫弬鏁般€ ',
+		'placement':'right'
+    });
+});
+function encode_uri() {
+	if($("#co_t").attr("checked"))
+		$("#result").val(encodeURIComponent($("#source").val()));
+	else
+		$("#result").val(encodeURI($("#source").val()));
+}
+
+function decode_uri() { 
+	if($("#co_t").attr("checked"))
+		$("#source").val(decodeURIComponent($("#result").val()));
+	else
+		$("#source").val(decodeURI($("#result").val()));
+}
+
+</script>
+</div>
+</div>
+
+
+</body>
+</html>
