@@ -1,0 +1,63 @@
+<html>
+<title>SUpsilon二要素验证</title>
+
+
+<meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<body>
+    <div style="text-align:center">
+          <div id="url-type">
+          <input type="radio" name="url-sel" value="scrwiki" onclick="document.getElementById('url-pre').innerHTML = ''; document.getElementById('url').size ='25';" checked>
+        </div>
+<body>
+
+<p><a href="encodeURL.html">姓名转URL编码</a></p>
+
+<button onclick="myFunction()">先点击这里生成验证参数</button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+	var x;
+	var name=prompt("输入名字（需转为URL编码）","");
+	var sfz=prompt("输入身份证","");
+	if (name!=null && name!=""){
+	    x="text&name=" + name + "url&card=" + sfz ;
+	    document.getElementById("demo").innerHTML=x;
+	}
+}
+</script>
+
+</body>
+        <p><span id="url-pre" style="font-family:Consolas;font-size: 12.8px;color: #333;"> </span>
+        <input type="text" id="url" name="url" placeholder="将上方生成的参数复制到输入框内" size="25" ></p>
+        <p>
+            <button onclick="Go2()">开始验证</button>
+        </p>
+    </div>
+</body>
+
+<script language="javascript">
+
+    var keyWord;
+
+function expand() {
+    var urltype = document.getElementsByName('url-sel');
+   if (urltype[0].checked) {
+       keyWord =   '' + keyWord  ;
+   }
+
+}
+
+
+function Go2(){
+keyWord=document.getElementById("url").value;
+if (keyWord != "") {
+    expand();
+  var result='https://smallyi.cn/sfz.php?type='+ keyWord ;
+  window.open(result);
+}
+}
+</script>
+
+</html>
