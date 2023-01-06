@@ -22,7 +22,7 @@ function myFunction(){
 	var name=prompt("输入名字（需转为URL编码）","");
 	var sfz=prompt("输入身份证","");
 	if (name!=null && name!=""){
-	    x="text&name=" + name + "url&card=" + sfz ;
+	    x="text&name=" + name + "&card=" + sfz ;
 	    document.getElementById("demo").innerHTML=x;
 	}
 }
