@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Funny</title>
+</head>
+<body>
+
+<!-- 创建一个按钮，当点击时触发弹窗 -->
+<button onclick="showPrompt()">点击这里</button>
+
+<script>
+// 显示弹窗，并获取用户输入
+function showPrompt() {
+  var userInput = prompt("请输入内容：");
+
+  // 如果用户点击了取消按钮或没有输入任何内容，不执行跳转
+  if (userInput === null || userInput === "") {
+    alert("没有输入内容。");
+    return;
+  }
+
+  // 构建跳转的URL，包括用户输入的内容
+  var redirectUrl = "http://ovoa.cc/api/beibao.php?msg=" + userInput;
+
+  // 执行页面跳转
+  window.location.href = redirectUrl;
+}
+</script>
+
+</body>
+</html>
