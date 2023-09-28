@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>音乐搜索</title>
+</head>
+<body>
+    <h1>音乐搜索</h1>
+    <input type="text" id="songName" placeholder="输入歌曲名称">
+    <button onclick="searchSong()">搜索</button>
+
+    <script>
+        function searchSong() {
+            const songName = document.getElementById('songName').value;
+            const apiUrl = `http://ovoa.cc/api/QQmusic.php?msg=${songName}&n=1&type=`;
+            
+            // 跳转到指定的URL
+            window.location.href = apiUrl;
+        }
+    </script>
+</body>
+</html>
